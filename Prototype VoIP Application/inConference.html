@@ -1,0 +1,60 @@
+<!DOCTYYPE html>
+<head>
+	<title>Prototype VoIP Application</title>
+	<link rel="stylesheet" type="text/css" href=".\css\styles.css" />
+	<link rel="stylesheet" type="text/css" href=".\assets\font-awesome-4.4.0\css\font-awesome.css">
+	<script>
+		function changeIcon(id) {
+			var iconStatus = document.getElementById(id);
+			var icons = ["microphone", "volume"];
+			var onIcons = ["fa fa-microphone", "fa fa-volume-up"];
+			var offIcons = ["fa fa-microphone-slash", "fa fa-volume-off"];
+
+			// object to store what kind of control the was clicked.
+			var control = {
+				type:icons.indexOf(iconStatus.id), 
+				// set the on and off icons according to what the control is.
+				onIcon:onIcons[icons.indexOf(iconStatus.id)],
+				offIcon:offIcons[icons.indexOf(iconStatus.id)],
+				// whether the object is on or off.
+				status:iconStatus.value
+			};
+			
+			//control.onIcon = onIcons[control.type];
+			//control.offIcon = offIcons[control.type];
+
+			// toggle the icon to show whether it is on or off.
+			if (control.status == "on"){
+				iconStatus.innerHTML = '<i class="'+control.offIcon+'"></i>';
+				control.status = "off"
+				iconStatus.value = control.status;
+				iconStatus.title = control.status;
+			}
+    		else {
+				iconStatus.innerHTML = '<i class="'+control.onIcon+'"></i>';
+				control.status = "on"
+				iconStatus.value = control.status;
+				iconStatus.title = control.status;
+    		}
+		    
+		}
+	</script>
+</head>
+<body>
+	<div id="controlPanel">
+		<button id="volume" onclick="changeIcon('volume')" class="bigbutton" value="on" title="on">
+			<i class="fa fa-volume-up"></i> 
+		</button>
+		<button id="microphone" onclick="changeIcon('microphone')" class="bigbutton" value="on" title="on">
+			<i class="fa fa-microphone"></i>
+		</button> 
+		
+	</div>
+	<div id="bodyContent">
+		<h1>Prototype VoIP Application</h1>
+		<p class="description">Welcome to the voice conference. Enjoy your stay <i class="fa fa-smile-o"></i></p>
+		<button class="bigButton" value="Leave Conference" title="Leave the audio conference.">leave conference</button>
+	</div>	
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+body{
+	margin: 0;
+}
+
+#bodyContent{
+	width: 75%;
+    padding: 25px;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+h1 {
+	font-family:  'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 5em;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 100;
+	line-height: 1em;
+}
+
+.description {
+	font-family:  'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 1.2em;
+	font-style: normal;
+	/*font-variant: small-caps;*/
+	font-weight: 100;
+    line-height: 1em;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bigButton {
+	font-family:  'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 4em;
+	line-height: 1em;
+	/*width: 400px;
+	height: 100px; */
+	padding: 50px;
+	margin: 50px auto 0 auto;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 100;
+	background-color: rgba(0, 217, 255, 0);
+    border: 1px solid #CCC;
+}
+
+.bigButton:hover {
+	background-color: rgba(10, 217, 255, 0);
+    border: 1px solid rgb(77, 144, 254);
+}
+
+.description, .bigButton, h1, #bodyContent {
+	text-align: center;
+	color: #3E3D3D;
+}
+
+@media only screen and (max-width: 767px){
+	.bigButton, h1{
+		font-size: 5.9vw;
+	}
+	#buttonWrapper {
+		height: 10px;
+	}
+}
+
+.fa.fa-microphone, .fa.fa-volume-up{
+	color: #2D9AFF;
+}
+
+.fa.fa-microphone-slash, .fa.fa-volume-off{
+	color: #FF3636;
+}
+
+#microphone, #volume, #controlPanel{
+	right: 0;
+    width: 100%;  
+    margin-top: 0;
+    padding-left: 0;
+    float: left;
+    border: none;
+}
+
+#microphone,  #volume{
+	top: 0;
+    float: left;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 50%;
+
+}
+
+#controlPanel {
+	width:10%;
+	height: 100%;
+	margin: 0;
+	background-color: #424242;
+}
